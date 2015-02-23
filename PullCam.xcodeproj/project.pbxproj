@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBB0D9F41A9B7603003268E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB0D9F31A9B7603003268E7 /* AppDelegate.swift */; };
+		BBB0D9F61A9B7603003268E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB0D9F51A9B7603003268E7 /* ViewController.swift */; };
+		BBB0D9F91A9B7603003268E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB0D9F71A9B7603003268E7 /* Main.storyboard */; };
+		BBB0D9FB1A9B7603003268E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB0D9FA1A9B7603003268E7 /* Images.xcassets */; };
+		BBB0D9FE1A9B7603003268E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBB0D9FC1A9B7603003268E7 /* LaunchScreen.xib */; };
+		BBB0DA0A1A9B7603003268E7 /* PullCamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB0DA091A9B7603003268E7 /* PullCamTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBB0DA041A9B7603003268E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBB0D9E61A9B7603003268E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBB0D9ED1A9B7603003268E7;
+			remoteInfo = PullCam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBB0D9EE1A9B7603003268E7 /* PullCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PullCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB0D9F21A9B7603003268E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB0D9F31A9B7603003268E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBB0D9F51A9B7603003268E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBB0D9F81A9B7603003268E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBB0D9FA1A9B7603003268E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BBB0D9FD1A9B7603003268E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BBB0DA031A9B7603003268E7 /* PullCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB0DA081A9B7603003268E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB0DA091A9B7603003268E7 /* PullCamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullCamTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBB0D9EB1A9B7603003268E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBB0DA001A9B7603003268E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBB0D9E51A9B7603003268E7 = {
+			isa = PBXGroup;
+			children = (
+				BBB0D9F01A9B7603003268E7 /* PullCam */,
+				BBB0DA061A9B7603003268E7 /* PullCamTests */,
+				BBB0D9EF1A9B7603003268E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBB0D9EF1A9B7603003268E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBB0D9EE1A9B7603003268E7 /* PullCam.app */,
+				BBB0DA031A9B7603003268E7 /* PullCamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBB0D9F01A9B7603003268E7 /* PullCam */ = {
+			isa = PBXGroup;
+			children = (
+				BBB0D9F31A9B7603003268E7 /* AppDelegate.swift */,
+				BBB0D9F51A9B7603003268E7 /* ViewController.swift */,
+				BBB0D9F71A9B7603003268E7 /* Main.storyboard */,
+				BBB0D9FA1A9B7603003268E7 /* Images.xcassets */,
+				BBB0D9FC1A9B7603003268E7 /* LaunchScreen.xib */,
+				BBB0D9F11A9B7603003268E7 /* Supporting Files */,
+			);
+			path = PullCam;
+			sourceTree = "<group>";
+		};
+		BBB0D9F11A9B7603003268E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBB0D9F21A9B7603003268E7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBB0DA061A9B7603003268E7 /* PullCamTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBB0DA091A9B7603003268E7 /* PullCamTests.swift */,
+				BBB0DA071A9B7603003268E7 /* Supporting Files */,
+			);
+			path = PullCamTests;
+			sourceTree = "<group>";
+		};
+		BBB0DA071A9B7603003268E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBB0DA081A9B7603003268E7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBB0D9ED1A9B7603003268E7 /* PullCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBB0DA0D1A9B7603003268E7 /* Build configuration list for PBXNativeTarget "PullCam" */;
+			buildPhases = (
+				BBB0D9EA1A9B7603003268E7 /* Sources */,
+				BBB0D9EB1A9B7603003268E7 /* Frameworks */,
+				BBB0D9EC1A9B7603003268E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PullCam;
+			productName = PullCam;
+			productReference = BBB0D9EE1A9B7603003268E7 /* PullCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBB0DA021A9B7603003268E7 /* PullCamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBB0DA101A9B7603003268E7 /* Build configuration list for PBXNativeTarget "PullCamTests" */;
+			buildPhases = (
+				BBB0D9FF1A9B7603003268E7 /* Sources */,
+				BBB0DA001A9B7603003268E7 /* Frameworks */,
+				BBB0DA011A9B7603003268E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBB0DA051A9B7603003268E7 /* PBXTargetDependency */,
+			);
+			name = PullCamTests;
+			productName = PullCamTests;
+			productReference = BBB0DA031A9B7603003268E7 /* PullCamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBB0D9E61A9B7603003268E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Matt Bettinson";
+				TargetAttributes = {
+					BBB0D9ED1A9B7603003268E7 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BBB0DA021A9B7603003268E7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BBB0D9ED1A9B7603003268E7;
+					};
+				};
+			};
+			buildConfigurationList = BBB0D9E91A9B7603003268E7 /* Build configuration list for PBXProject "PullCam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBB0D9E51A9B7603003268E7;
+			productRefGroup = BBB0D9EF1A9B7603003268E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBB0D9ED1A9B7603003268E7 /* PullCam */,
+				BBB0DA021A9B7603003268E7 /* PullCamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBB0D9EC1A9B7603003268E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB0D9F91A9B7603003268E7 /* Main.storyboard in Resources */,
+				BBB0D9FE1A9B7603003268E7 /* LaunchScreen.xib in Resources */,
+				BBB0D9FB1A9B7603003268E7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBB0DA011A9B7603003268E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBB0D9EA1A9B7603003268E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB0D9F61A9B7603003268E7 /* ViewController.swift in Sources */,
+				BBB0D9F41A9B7603003268E7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBB0D9FF1A9B7603003268E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB0DA0A1A9B7603003268E7 /* PullCamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBB0DA051A9B7603003268E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBB0D9ED1A9B7603003268E7 /* PullCam */;
+			targetProxy = BBB0DA041A9B7603003268E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBB0D9F71A9B7603003268E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBB0D9F81A9B7603003268E7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBB0D9FC1A9B7603003268E7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBB0D9FD1A9B7603003268E7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBB0DA0B1A9B7603003268E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBB0DA0C1A9B7603003268E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBB0DA0E1A9B7603003268E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PullCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BBB0DA0F1A9B7603003268E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PullCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BBB0DA111A9B7603003268E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PullCamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PullCam.app/PullCam";
+			};
+			name = Debug;
+		};
+		BBB0DA121A9B7603003268E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PullCamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PullCam.app/PullCam";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBB0D9E91A9B7603003268E7 /* Build configuration list for PBXProject "PullCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB0DA0B1A9B7603003268E7 /* Debug */,
+				BBB0DA0C1A9B7603003268E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBB0DA0D1A9B7603003268E7 /* Build configuration list for PBXNativeTarget "PullCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB0DA0E1A9B7603003268E7 /* Debug */,
+				BBB0DA0F1A9B7603003268E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBB0DA101A9B7603003268E7 /* Build configuration list for PBXNativeTarget "PullCamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB0DA111A9B7603003268E7 /* Debug */,
+				BBB0DA121A9B7603003268E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBB0D9E61A9B7603003268E7 /* Project object */;
+}
