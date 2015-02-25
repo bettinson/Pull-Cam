@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EF0FD89F-F8D4-4932-B0FD-A55C262715BD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PullCam</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DBD375777E5AD7D70180CBA645C59F6A47CC95FA</key>
+		<string>github.com:bettinson/Pull-Cam.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PullCam.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DBD375777E5AD7D70180CBA645C59F6A47CC95FA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:bettinson/Pull-Cam.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DBD375777E5AD7D70180CBA645C59F6A47CC95FA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DBD375777E5AD7D70180CBA645C59F6A47CC95FA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PullCam</string>
+		</dict>
+	</array>
+</dict>
+</plist>
