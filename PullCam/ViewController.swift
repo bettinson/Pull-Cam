@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     var captureDevice : AVCaptureDevice?
     var previewLayer : AVCaptureVideoPreviewLayer?
     var stillImageOutput: AVCaptureStillImageOutput?
-    
-    
+    var placeholderLabel: UILabel?
 
     let expandedHeight : CGFloat = 70.0
     
@@ -24,10 +23,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        captureSession.sessionPreset? = AVCaptureSessionPresetPhoto
+        captureSession.sessionPreset? = AVCaptureSessionPresetHigh
         
-        self.navigationController?.title = "Take picture"
+        var placeholderLabel = UILabel(frame: CGRectMake(50, -50, self.view.frame.width / 2.0, 21))
 
+        placeholderLabel.text = "Take picture"
+        placeholderLabel.textColor = UIColor.grayColor()
+        self.view.addSubview(placeholderLabel)
         
         let devices = AVCaptureDevice.devices()
         let pSelector : Selector = "handleDragDown:"
@@ -106,23 +108,38 @@ class ViewController: UIViewController {
         }
     }
     
+    func zoomTo (value : Float) {
+        var ratioValue = Float(value)/Float(self.view.frame.width)
+        if let device = captureDevice {
+            if (device.lockForConfiguration(nil)) {
+                device.videoZoomFactor = 1.0 + CGFloat(ratioValue)
+                device.unlockForConfiguration()
+            }
+            println(ratioValue)
+        }
+
+    }
 
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        var anyTouch = touches.anyObject() as UITouch
-        var touchPercentFocus = anyTouch.locationInView(self.view).x
-//        handleDragDown(pull: )
-        //focusTo(Float(touchPercentFocus))
-    }
-    
-    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-        var anyTouch = touches.anyObject() as UITouch
-        var touchPercentFocus = anyTouch.locationInView(self.view).x
-        //focusTo(Float(touchPercentFocus))
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if let touch = touches.first as? UITouch {
+            var touchPercentFocus = touch.locationInView(self.view).x
+            focusTo(Float(touchPercentFocus))
+        }
+        super.touchesBegan(touches, withEvent:event)
+        //        handleDragDown(pull: )
         
     }
     
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let newTouch = touches.first as? UITouch
+        var touchPercentFocus = newTouch!.locationInView(self.view).x
+        focusTo(Float(touchPercentFocus))
+        super.touchesBegan(touches, withEvent:event)
+        //
+    }
+    
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         println("Ended touches")
         //takeStillImage()
     }
@@ -139,8 +156,13 @@ class ViewController: UIViewController {
         }
         
         if pull.state == UIGestureRecognizerState.Changed {
-            if (pull.translationInView(self.view).y > self.expandedHeight && pull.translationInView(self.view).y > CGFloat(0.0)) {
-                //TODO: Indicator animation
+            if (pull.translationInView(self.view).y < self.expandedHeight && pull.translationInView(self.view).y > CGFloat(0.0)) {
+                var newColor :UIColor = UIColor(red: 255, green: 255, blue: 255, alpha:1)
+                self.placeholderLabel?.textColor = UIColor.blackColor()
+                println(newColor)
+            } else {
+                var newColor :UIColor = UIColor(red: 150, green: 255, blue: 255, alpha:0)
+                self.placeholderLabel?.textColor = newColor
             }
         }
         
@@ -168,7 +190,8 @@ class ViewController: UIViewController {
 
     func animateBackFromPull (sender : AnyObject) {
         var springRatio = -(sender.translationInView(self.view).y / self.view.bounds.origin.y)
-        UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: springRatio * 0.25, initialSpringVelocity: springRatio * 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: ({
+        UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: springRatio * 0.25, initialSpringVelocity: springRatio * 0.2, 
+            options: UIViewAnimationOptions.CurveEaseInOut, animations: ({
             self.view.bounds.origin = CGPoint(x: self.view.bounds.origin.x, y: 0)
         }), completion:nil)
     }
@@ -179,6 +202,7 @@ class ViewController: UIViewController {
             if let videoConnection = self.stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
                 videoConnection.videoOrientation = AVCaptureVideoOrientation.Portrait
                 println("got here")
+                
                 self.stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {(sampleBuffer : CMSampleBufferRef!, error) in
                     if (sampleBuffer != nil) {
                         let imageDataJpeg = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
