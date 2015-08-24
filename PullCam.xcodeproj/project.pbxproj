@@ -156,6 +156,8 @@
 		BBB0D9E61A9B7603003268E7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Matt Bettinson";
 				TargetAttributes = {
@@ -405,6 +407,7 @@
 				BBB0DA0F1A9B7603003268E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBB0DA101A9B7603003268E7 /* Build configuration list for PBXNativeTarget "PullCamTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +416,7 @@
 				BBB0DA121A9B7603003268E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
