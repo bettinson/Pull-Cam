@@ -77,9 +77,15 @@ class ViewController: UIViewController {
     
     func beginSession() {
         let err : NSError? = nil
-        captureSession.addInput(AVCaptureDeviceInput(device: captureDevice))
-        if err != nil {
-            print("Error: \(err?.localizedDescription)")
+        do {
+            try captureSession.addInput(AVCaptureDeviceInput(device: captureDevice))
+            if err != nil {
+                print("Error: \(err?.localizedDescription)")
+            }
+        }
+        catch
+        {
+            print(error)
         }
         if captureSession.canAddOutput(stillImageOutput) {
             captureSession.addOutput(stillImageOutput)
@@ -87,7 +93,7 @@ class ViewController: UIViewController {
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
-        self.view.layer.addSublayer(previewLayer)
+        self.view.layer.addSublayer(previewLayer!)
         previewLayer?.frame = self.view.layer.frame
         captureSession.startRunning()
         
@@ -98,6 +104,7 @@ class ViewController: UIViewController {
             do {
                 try device.lockForConfiguration()
             } catch _ {
+                
             }
             device.focusMode = .Locked
             device.unlockForConfiguration()
@@ -107,12 +114,16 @@ class ViewController: UIViewController {
     func focusTo(value : Float) {
         let ratioValue = Float(value)/Float(self.view.frame.width)
         if let device = captureDevice {
-            if (device.lockForConfiguration()) {
-                device.setFocusModeLockedWithLensPosition(ratioValue, completionHandler: {
-                    (time) -> Void in
-                })
-                device.unlockForConfiguration()
+            do {
+                try device.lockForConfiguration()
+                    device.setFocusModeLockedWithLensPosition(ratioValue, completionHandler: {
+                        (time) -> Void in
+                    })
+                    device.unlockForConfiguration()
+            } catch {
+                return
             }
+
             print(ratioValue)
         }
     }
@@ -120,9 +131,13 @@ class ViewController: UIViewController {
     func zoomTo (value : Float) {
         let ratioValue = Float(value)/Float(self.view.frame.width)
         if let device = captureDevice {
-            if (device.lockForConfiguration()) {
-                device.videoZoomFactor = 1.0 + CGFloat(ratioValue)
-                device.unlockForConfiguration()
+            do {
+                try device.lockForConfiguration()
+                    device.videoZoomFactor = 1.0 + CGFloat(ratioValue)
+                    device.unlockForConfiguration()
+                
+            } catch {
+                return
             }
             print(ratioValue)
         }
@@ -131,8 +146,8 @@ class ViewController: UIViewController {
 
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let touch = touches.first as? UITouch {
-            var touchPercentFocus = touch.locationInView(self.view).x
+        if let touch = touches.first as UITouch! {
+            let touchPercentFocus = touch.locationInView(self.view).x
             focusTo(Float(touchPercentFocus))
         }
         super.touchesBegan(touches, withEvent:event)
@@ -141,8 +156,8 @@ class ViewController: UIViewController {
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let newTouch = touches.first as? UITouch
-        var touchPercentFocus = newTouch!.locationInView(self.view).x
+        let newTouch = touches.first as UITouch!
+        let touchPercentFocus = newTouch!.locationInView(self.view).x
         focusTo(Float(touchPercentFocus))
         super.touchesBegan(touches, withEvent:event)
         //
