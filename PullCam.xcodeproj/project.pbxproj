@@ -13,6 +13,7 @@
 		BBB0D9FB1A9B7603003268E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB0D9FA1A9B7603003268E7 /* Images.xcassets */; };
 		BBB0D9FE1A9B7603003268E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBB0D9FC1A9B7603003268E7 /* LaunchScreen.xib */; };
 		BBB0DA0A1A9B7603003268E7 /* PullCamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB0DA091A9B7603003268E7 /* PullCamTests.swift */; };
+		BBE1F38B1BA8E0290020F60E /* RandomColourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE1F38A1BA8E0290020F60E /* RandomColourViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BBB0DA031A9B7603003268E7 /* PullCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB0DA081A9B7603003268E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBB0DA091A9B7603003268E7 /* PullCamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullCamTests.swift; sourceTree = "<group>"; };
+		BBE1F38A1BA8E0290020F60E /* RandomColourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColourViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				BBB0D9F31A9B7603003268E7 /* AppDelegate.swift */,
 				BBB0D9F51A9B7603003268E7 /* ViewController.swift */,
+				BBE1F38A1BA8E0290020F60E /* RandomColourViewController.swift */,
 				BBB0D9F71A9B7603003268E7 /* Main.storyboard */,
 				BBB0D9FA1A9B7603003268E7 /* Images.xcassets */,
 				BBB0D9FC1A9B7603003268E7 /* LaunchScreen.xib */,
@@ -163,6 +166,7 @@
 				TargetAttributes = {
 					BBB0D9ED1A9B7603003268E7 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Z8CGBJ42EF;
 					};
 					BBB0DA021A9B7603003268E7 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -215,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB0D9F61A9B7603003268E7 /* ViewController.swift in Sources */,
+				BBE1F38B1BA8E0290020F60E /* RandomColourViewController.swift in Sources */,
 				BBB0D9F41A9B7603003268E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +343,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PullCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -348,9 +356,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PullCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

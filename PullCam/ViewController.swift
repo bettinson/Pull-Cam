@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         captureSession.sessionPreset? = AVCaptureSessionPresetHigh
-        
         let placeholderLabel = UILabel(frame: CGRectMake(50, -50, self.view.frame.width / 2.0, 21))
 
         placeholderLabel.text = "Take picture"
@@ -61,14 +60,12 @@ class ViewController: UIViewController {
                     captureDevice = device as? AVCaptureDevice
                     stillImageOutput = AVCaptureStillImageOutput()
                     stillImageOutput?.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-
                 }
             }
         }
         if captureDevice != nil {
             beginSession()
         }
-
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -116,14 +113,14 @@ class ViewController: UIViewController {
         if let device = captureDevice {
             do {
                 try device.lockForConfiguration()
-                    device.setFocusModeLockedWithLensPosition(ratioValue, completionHandler: {
-                        (time) -> Void in
-                    })
-                    device.unlockForConfiguration()
+                
             } catch {
                 return
             }
-
+            device.setFocusModeLockedWithLensPosition(ratioValue, completionHandler: {
+                (time) -> Void in
+            })
+            device.unlockForConfiguration()
             print(ratioValue)
         }
     }
@@ -133,12 +130,11 @@ class ViewController: UIViewController {
         if let device = captureDevice {
             do {
                 try device.lockForConfiguration()
-                    device.videoZoomFactor = 1.0 + CGFloat(ratioValue)
-                    device.unlockForConfiguration()
-                
             } catch {
                 return
             }
+            device.videoZoomFactor = 1.0 + CGFloat(ratioValue)
+            device.unlockForConfiguration()
             print(ratioValue)
         }
 
@@ -148,7 +144,7 @@ class ViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first as UITouch! {
             let touchPercentFocus = touch.locationInView(self.view).x
-            focusTo(Float(touchPercentFocus))
+            zoomTo(Float(touchPercentFocus))
         }
         super.touchesBegan(touches, withEvent:event)
         //        handleDragDown(pull: )
@@ -226,7 +222,6 @@ class ViewController: UIViewController {
             if let videoConnection = self.stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
                 videoConnection.videoOrientation = AVCaptureVideoOrientation.Portrait
                 print("got here")
-                
                 self.stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {(sampleBuffer : CMSampleBufferRef!, error) in
                     if (sampleBuffer != nil) {
                         let imageDataJpeg = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
