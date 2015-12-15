@@ -24,6 +24,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         captureSession.sessionPreset? = AVCaptureSessionPresetHigh
+        
+        let colourView = RandomColourViewController()
+        colourView.frame = CGRectMake(50, -50, self.view.frame.width / 2.0, 21)
+        self.view.addSubview(colourView)
+        
         let placeholderLabel = UILabel(frame: CGRectMake(50, -50, self.view.frame.width / 2.0, 21))
 
         placeholderLabel.text = "Take picture"
