@@ -108,20 +108,21 @@ class ViewController: UIViewController {
         }
     }
     
-    func focusTo(value : Float) {
-        let ratioValue = Float(value)/Float(self.view.frame.width)
+    func focusTo(x : CGFloat, y : CGFloat) {
+        var point : CGPoint = CGPoint()
+        point.x = x
+        point.y = y
         if let device = captureDevice {
             do {
                 try device.lockForConfiguration()
-                
+                device.focusMode = AVCaptureFocusMode.AutoFocus
+                device.exposureMode = AVCaptureExposureMode.ContinuousAutoExposure
+                NSLog("%f", point.x)
+                device.focusPointOfInterest = point
+                device.exposurePointOfInterest = point
             } catch {
                 return
             }
-            device.setFocusModeLockedWithLensPosition(ratioValue, completionHandler: {
-                (time) -> Void in
-            })
-            device.unlockForConfiguration()
-            print(ratioValue)
         }
     }
     
@@ -143,8 +144,8 @@ class ViewController: UIViewController {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first as UITouch! {
-            let touchPercentFocus = touch.locationInView(self.view).x
-            zoomTo(Float(touchPercentFocus))
+            var touchPercentFocus = touch.locationInView(self.view).x
+            focusTo(touch.locationInView(self.view).x, y: touch.locationInView(self.view).y)
         }
         super.touchesBegan(touches, withEvent:event)
         //        handleDragDown(pull: )
@@ -153,8 +154,8 @@ class ViewController: UIViewController {
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let newTouch = touches.first as UITouch!
-        let touchPercentFocus = newTouch!.locationInView(self.view).x
-        focusTo(Float(touchPercentFocus))
+        var touchPercentFocus = newTouch!.locationInView(self.view).x
+        //focusTo(Float(touchPercentFocus))
         super.touchesBegan(touches, withEvent:event)
         //
     }
@@ -203,6 +204,7 @@ class ViewController: UIViewController {
         }
         
         let locationInView = pull.locationInView(self.view)
+        
         UIView.animateWithDuration(0.1) {
             self.view.bounds.origin = CGPoint(x: self.view.bounds.origin.x, y:-(pull.translationInView(self.view).y) - self.view.bounds.origin.y )
         }
